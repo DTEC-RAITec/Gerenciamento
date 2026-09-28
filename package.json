@@ -1,14 +1,18 @@
 {
   "name": "dtec-automacao-pista",
+  "productName": "DTec Gerenciamento",
+  "description": "Módulo de gerenciamento da competição do sistema de automação DTec.",
   "main": "electron/main.cjs",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "electron": "electron .",
     "dev:desktop": "concurrently \"npm run dev\" \"wait-on http://localhost:5173 && npm run electron\"",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build --base=./",
+    "build:win": "npm run build && electron-builder --win",
+    "build:win:dir": "npm run build && electron-builder --win --dir",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -26,6 +30,7 @@
     "@vitejs/plugin-react": "^6.1.1",
     "concurrently": "^10.0.5",
     "electron": "^44.4.5",
+    "electron-builder": "^26.0.12",
     "eslint": "^10.10.0",
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.6",
@@ -34,5 +39,23 @@
     "typescript-eslint": "^8.69.0",
     "vite": "^8.3.0",
     "wait-on": "^9.1.0"
+  },
+  "build": {
+    "appId": "br.ufc.raitec.dtec.gerenciamento",
+    "productName": "DTec Gerenciamento",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "dados/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        "portable"
+      ]
+    }
   }
 }
