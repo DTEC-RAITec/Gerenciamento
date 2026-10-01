@@ -10,9 +10,9 @@ O projeto foi pensado principalmente para funcionar **localmente e sem depender 
 
 ---
 
-## Sobre a DTec
+## Sobre o DTec
 
-A DTec é uma competição tecnológica desenvolvida no contexto do **RAITec**, envolvendo a construção e execução de carrinhos em uma pista de competição.
+O DTec é uma competição tecnológica desenvolvida no contexto do **RAITec**, envolvendo a construção e execução de carrinhos em uma pista de competição.
 
 Para diminuir a quantidade de operações manuais durante a prova e tornar o registro dos resultados mais confiável, está sendo desenvolvido um sistema de automação dividido em diferentes módulos.
 
