@@ -54,7 +54,3 @@ lerna-debug.log*
 # ==========================================================
 # RESULTADOS DA COMPETIÇÃO
 # ==========================================================
-
-dados/resultados.csv
-dados/resultados.csv.bak
-dados/resultados.csv.tmp
